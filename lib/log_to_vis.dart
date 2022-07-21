@@ -771,90 +771,49 @@ class _LogInVisWidgetState extends State<LogToVisPage> {
                                       fontSize: 40,
                                     ),
                                   ),
-                                  const Divider(
-                                    height: 3,
-                                    thickness: 3,
-                                  ),
-                                  Container(
-                                    width: double.infinity,
-                                    decoration: const BoxDecoration(),
-                                    child: Padding(
-                                      padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              0, 20, 0, 0),
-                                      child: TextFormField(
-                                        controller: textController1,
-                                        autofocus: true,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelText: 'Login',
-                                          hintText: 'Введите логин',
-                                          hintStyle: const TextStyle(
-                                            fontFamily: 'Poppins',
-                                            fontSize: 40,
-                                          ),
-                                          enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
-                                                color: Colors.grey,
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(15)),
-                                          focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
-                                                color: Colors.black,
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(15)),
-                                        ),
-                                        style: const TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 24,
-                                        ),
+                                  const Center(
+                                      child: SizedBox(
+                                    height: 100,
+                                  )),
+                                  const Center(
+                                    widthFactor: 1,
+                                    child: Text(
+                                      "Email",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16,
                                       ),
                                     ),
                                   ),
-                                  Container(
-                                    width: double.infinity,
-                                    decoration: const BoxDecoration(),
-                                    child: Padding(
-                                      padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              0, 20, 0, 0),
-                                      child: TextFormField(
-                                        controller: textController2,
-                                        autofocus: true,
-                                        obscureText: false,
-                                        decoration: InputDecoration(
-                                          labelText: 'Пароль',
-                                          hintText: 'Введите пароль',
-                                          hintStyle: const TextStyle(
-                                            fontFamily: 'Poppins',
-                                            fontSize: 40,
-                                          ),
-                                          enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
-                                                color: Colors.grey,
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(15)),
-                                          focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
-                                                color: Colors.black,
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  BorderRadius.circular(15)),
-                                        ),
-                                        style: const TextStyle(
-                                          fontFamily: 'Poppins',
-                                          fontSize: 24,
-                                        ),
-                                        keyboardType:
-                                            TextInputType.visiblePassword,
+                                  Center(
+                                    widthFactor: 1,
+                                    child: TextFormField(
+                                      decoration: const InputDecoration(
+                                          hintText: "myteam.trainer@volley.kz"),
+                                    ),
+                                  ),
+                                  const Center(
+                                      child: SizedBox(
+                                    height: 20,
+                                  )),
+                                  const Center(
+                                    widthFactor: 1,
+                                    child: Text(
+                                      "Password",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16,
                                       ),
+                                    ),
+                                  ),
+                                  Center(
+                                    widthFactor: 1,
+                                    child: TextFormField(
+                                      decoration: const InputDecoration(
+                                          hintText: "myteam.trainer@volley.kz"),
+                                      obscureText: true,
                                     ),
                                   ),
                                   SizedBox(
