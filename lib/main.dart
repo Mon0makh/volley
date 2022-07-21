@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'sign_in.dart';
@@ -67,7 +69,7 @@ class MyWidget extends StatelessWidget {
                             padding: const EdgeInsets.only(left: 50),
                             child: Container(
                               width: 342,
-                              height: 46,
+                              height: 35,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
                                 border: Border.all(
@@ -76,40 +78,17 @@ class MyWidget extends StatelessWidget {
                                 ),
                                 color: const Color(0xffe4e4e4),
                               ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  TextFormField(
-                                    decoration: const InputDecoration(
-                                      hintText: "Поиск по сайту...",
-                                      hintStyle: TextStyle(
-                                        color: Color(0xff5d5d5d),
-                                        fontSize: 17,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      )
-                                    ),
-                                  ),
-                                  /*SizedBox(
-                                    width: 27,
-                                    height: 32,
-                                    child: Container(
-                                      width: 50,
-                                      height: 50,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: const Color(0xff5d5d5d),
-                                          width: 2,
-                                        ),
-                                        color: const Color(0xffd9d9d9),
-                                      ),
-                                    ),
-                                  ),*/
-                                ],
+                              child: TextFormField(
+                                decoration: const InputDecoration(
+                                  suffixIcon: Icon(Icons.search, color: Colors.black,),
+                                  hintText: "Поиск по сайту...",
+                                  hintStyle: TextStyle(
+                                    color: Color(0xff5d5d5d),
+                                    fontSize: 17,
+                                    fontFamily: "Open Sans",
+                                    fontWeight: FontWeight.w700,
+                                  )
+                                ),
                               ),
                             ),
                           ),
@@ -117,9 +96,171 @@ class MyWidget extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
-                        child: ButtonBar(
+                        child: Row(
                           children: <Widget>[
-                            PopupMenuButton<String>(
+                            TextButton(
+                              onPressed: null,
+                              onHover: (value) {
+                                if(value){
+                                showMenu(
+                                  context: context, 
+                                  position: RelativeRect.fromRect(Rect.zero, Rect.largest), 
+                                  items: [
+                                    PopupMenuItem(
+                                      value: "Новости",
+                                      child: TextButton(
+                                        onPressed: (() => print("Новости")),
+                                        child: const Text(
+                                          "Новости",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "Матч-Центр",
+                                      child: TextButton(
+                                        onPressed: (() => print("Матч-Центр")),
+                                        child: const Text(
+                                          "Матч-Центр",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "Руководство",
+                                      child: TextButton(
+                                        onPressed: (() => print("Руководство")),
+                                        child: const Text(
+                                          "Руководство",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "Арбитры",
+                                      child: TextButton(
+                                        onPressed: (() => print("Арбитры")),
+                                        child: const Text(
+                                          "Арбитры",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "Контакты",
+                                      child: TextButton(
+                                        onPressed: (() => print("Контакты")),
+                                        child: const Text(
+                                          "Контакты",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "Структура",
+                                      child: TextButton(
+                                        onPressed: (() => print("Структура")),
+                                        child: const Text(
+                                          "Структура",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "История",
+                                      child: TextButton(
+                                        onPressed: (() => print("История")),
+                                        child: const Text(
+                                          "История",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "Документы",
+                                      child: TextButton(
+                                        onPressed: (() => print("Документы")),
+                                        child: const Text(
+                                          "Документы",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "Отчет деятельности",
+                                      child: TextButton(
+                                        onPressed: (() =>
+                                            print("Отчет деятельности")),
+                                        child: const Text(
+                                          "Отчет деятельности",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    PopupMenuItem(
+                                      value: "Государственные символы РК",
+                                      child: TextButton(
+                                        onPressed: (() =>
+                                            print("Государственные символы РК")),
+                                        child: const Text(
+                                          "Государственные символы РК",
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 13,
+                                            fontFamily: "Open Sans",
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ]);
+                                }
+                              },
                               child: const Text(
                                 "ФЕДЕРАЦИЯ  |",
                                 style: TextStyle(
@@ -129,175 +270,15 @@ class MyWidget extends StatelessWidget {
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
-                              itemBuilder: (BuildContext context) =>
-                                  <PopupMenuEntry<String>>[
-                                PopupMenuItem<String>(
-                                  value: "Новости",
-                                  child: TextButton(
-                                    onPressed: (() => print("Новости")),
-                                    child: const Text(
-                                      "Новости",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "Матч-Центр",
-                                  child: TextButton(
-                                    onPressed: (() => print("Матч-Центр")),
-                                    child: const Text(
-                                      "Матч-Центр",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "Руководство",
-                                  child: TextButton(
-                                    onPressed: (() => print("Руководство")),
-                                    child: const Text(
-                                      "Руководство",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "Арбитры",
-                                  child: TextButton(
-                                    onPressed: (() => print("Арбитры")),
-                                    child: const Text(
-                                      "Арбитры",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "Контакты",
-                                  child: TextButton(
-                                    onPressed: (() => print("Контакты")),
-                                    child: const Text(
-                                      "Контакты",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "Структура",
-                                  child: TextButton(
-                                    onPressed: (() => print("Структура")),
-                                    child: const Text(
-                                      "Структура",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "История",
-                                  child: TextButton(
-                                    onPressed: (() => print("История")),
-                                    child: const Text(
-                                      "История",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "Документы",
-                                  child: TextButton(
-                                    onPressed: (() => print("Документы")),
-                                    child: const Text(
-                                      "Документы",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "Отчет деятельности",
-                                  child: TextButton(
-                                    onPressed: (() =>
-                                        print("Отчет деятельности")),
-                                    child: const Text(
-                                      "Отчет деятельности",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PopupMenuItem<String>(
-                                  value: "Государственные символы РК",
-                                  child: TextButton(
-                                    onPressed: (() =>
-                                        print("Государственные символы РК")),
-                                    child: const Text(
-                                      "Государственные символы РК",
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontFamily: "Open Sans",
-                                        fontWeight: FontWeight.w700,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
                             ),
-                            PopupMenuButton<String>(
-                              child: const Text(
-                                "НОВОСТИ  |",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 13,
-                                  fontFamily: "Open Sans",
-                                  fontWeight: FontWeight.w700,
-                                ),
-                              ),
-                              itemBuilder: (BuildContext context) =>
-                                  <PopupMenuEntry<String>>[
-                                PopupMenuItem<String>(
+                            TextButton(
+                              onPressed: null,
+                              onHover: ((event) => {
+                                showMenu(
+                                  context: context, 
+                                  position: RelativeRect.fromRect(Rect.zero, Rect.largest), 
+                                  items: [
+                                PopupMenuItem(
                                   value: "СМИ о волейболе",
                                   child: TextButton(
                                     onPressed: (() => print("СМИ о волейболе")),
@@ -312,7 +293,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Международные соревнования",
                                   child: TextButton(
                                     onPressed: (() =>
@@ -328,7 +309,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Национальная Лига",
                                   child: TextButton(
                                     onPressed: (() =>
@@ -344,7 +325,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Высшая Лига",
                                   child: TextButton(
                                     onPressed: (() => print("Высшая Лига")),
@@ -359,7 +340,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Высшая Лига U-23",
                                   child: TextButton(
                                     onPressed: (() =>
@@ -375,7 +356,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Сборные",
                                   child: TextButton(
                                     onPressed: (() => print("Сборные")),
@@ -390,7 +371,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Детский волейбол",
                                   child: TextButton(
                                     onPressed: (() =>
@@ -406,7 +387,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Федерация",
                                   child: TextButton(
                                     onPressed: (() => print("Фередация")),
@@ -421,21 +402,27 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ],
-                            ),
-                            PopupMenuButton<String>(
+                                  ]
+                                )
+                              }),
                               child: const Text(
-                                "СБОРНЫЕ  |",
+                                "НОВОСТИ  |",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 13,
                                   fontFamily: "Open Sans",
                                   fontWeight: FontWeight.w700,
                                 ),
-                              ),
-                              itemBuilder: (BuildContext context) =>
-                                  <PopupMenuEntry<String>>[
-                                PopupMenuItem<String>(
+                              )
+                            ),
+                            TextButton(
+                              onPressed: null,
+                              onHover: ((event){
+                                showMenu(
+                                  context: context, 
+                                  position: RelativeRect.fromRect(Rect.zero, Rect.largest), 
+                                  items: [
+                                PopupMenuItem(
                                   value: "Мужская",
                                   child: TextButton(
                                     onPressed: (() => print("Мужская")),
@@ -450,7 +437,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Женская",
                                   child: TextButton(
                                     onPressed: (() => print("Женская")),
@@ -465,7 +452,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Молодежные",
                                   child: TextButton(
                                     onPressed: (() => print("Молодежные")),
@@ -480,11 +467,10 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ],
-                            ),
-                            PopupMenuButton<String>(
+                                  ]);
+                              }),
                               child: const Text(
-                                "КЛУБЫ  |",
+                                "СБОРНЫЕ  |",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 13,
@@ -492,9 +478,16 @@ class MyWidget extends StatelessWidget {
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
-                              itemBuilder: (BuildContext context) =>
-                                  <PopupMenuEntry<String>>[
-                                PopupMenuItem<String>(
+                            ),
+                            TextButton(
+                              onPressed: null,
+                              onHover: ((event){
+                                showMenu(
+                                  context: context, 
+                                  position: RelativeRect.fromRect(Rect.zero, Rect.largest), 
+                                  items: [
+
+                                PopupMenuItem(
                                   value: "Национальная Лига",
                                   child: TextButton(
                                     onPressed: (() =>
@@ -510,7 +503,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Высшая Лига",
                                   child: TextButton(
                                     onPressed: (() => print("Высшая Лига")),
@@ -525,7 +518,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Высшая Лига U-23",
                                   child: TextButton(
                                     onPressed: (() =>
@@ -541,11 +534,10 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ],
-                            ),
-                            PopupMenuButton<String>(
+                                  ]);
+                              }),
                               child: const Text(
-                                "МЕДИА  |",
+                                "КЛУБЫ  |",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 13,
@@ -553,9 +545,15 @@ class MyWidget extends StatelessWidget {
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
-                              itemBuilder: (BuildContext context) =>
-                                  <PopupMenuEntry<String>>[
-                                PopupMenuItem<String>(
+                            ),
+                            TextButton(
+                              onPressed: null,
+                              onHover: ((event){
+                                showMenu(
+                                  context: context, 
+                                  position: RelativeRect.fromRect(Rect.zero, Rect.largest), 
+                                  items: [
+                                PopupMenuItem(
                                   value: "Фотогалерея",
                                   child: TextButton(
                                     onPressed: (() => print("Фотогалерея")),
@@ -570,7 +568,7 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                PopupMenuItem<String>(
+                                PopupMenuItem(
                                   value: "Видеогалерея",
                                   child: TextButton(
                                     onPressed: (() => print("Видеогалерея")),
@@ -585,21 +583,28 @@ class MyWidget extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                              ],
-                            ),
-                            PopupMenuButton<String>(
-                                child: const Text(
-                                  "ПРОЧЕЕ",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                    fontFamily: "Open Sans",
-                                    fontWeight: FontWeight.w700,
-                                  ),
+
+                                  ]);
+                              }),
+                              child: const Text(
+                                "МЕДИА  |",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 13,
+                                  fontFamily: "Open Sans",
+                                  fontWeight: FontWeight.w700,
                                 ),
-                                itemBuilder: (BuildContext context) =>
-                                    <PopupMenuEntry<String>>[
-                                      PopupMenuItem<String>(
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: null,
+                              onHover: ((event){
+                                showMenu(
+                                  context: context, 
+                                  position: RelativeRect.fromRect(Rect.zero, Rect.largest), 
+                                  items: [
+
+                                      PopupMenuItem(
                                         value: "Календарь",
                                         child: TextButton(
                                           onPressed: (() =>
@@ -615,7 +620,7 @@ class MyWidget extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      PopupMenuItem<String>(
+                                      PopupMenuItem(
                                         value: "Пляжный волейбол",
                                         child: TextButton(
                                           onPressed: (() =>
@@ -631,7 +636,7 @@ class MyWidget extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      PopupMenuItem<String>(
+                                      PopupMenuItem(
                                         value: "Детский волейбол",
                                         child: TextButton(
                                           onPressed: (() =>
@@ -647,7 +652,7 @@ class MyWidget extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      PopupMenuItem<String>(
+                                      PopupMenuItem(
                                         value: "Партнеры",
                                         child: TextButton(
                                           onPressed: (() =>
@@ -663,7 +668,7 @@ class MyWidget extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      PopupMenuItem<String>(
+                                      PopupMenuItem(
                                         value: "WADA",
                                         child: TextButton(
                                           onPressed: (() =>
@@ -679,7 +684,7 @@ class MyWidget extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      PopupMenuItem<String>(
+                                      PopupMenuItem(
                                         value: "Сборные",
                                         child: TextButton(
                                           onPressed: (() =>
@@ -695,7 +700,18 @@ class MyWidget extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                    ])
+                                  ]);
+                              }),
+                                child: const Text(
+                                  "ПРОЧЕЕ",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 13,
+                                    fontFamily: "Open Sans",
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                            ),
                           ],
                         ),
                       ),

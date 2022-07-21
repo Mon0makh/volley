@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'main_logged.dart';
+import 'log_to_vis.dart';
 
 final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg", width: 130, height: 130,);
 bool zapomnit = false;
@@ -848,7 +849,10 @@ class SignInPageState extends State<SignInPage> {
                               height: 50,
                               child: ElevatedButton(
                                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
-                                onPressed: (() => print("Enter")),
+                                onPressed: (() => Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) => const LogInVisWidget()))),
                                 child: const Text(
                                   "Войти в систему VIS",
                                   style: TextStyle(
