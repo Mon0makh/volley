@@ -65,8 +65,12 @@ flutter:
     - assets\front_header.png
     - assets\LOGO.svg
     - assets\UserIcon.svg
+<<<<<<< HEAD
     - assets\SignIn.png
 
+=======
+    
+>>>>>>> 798ee32bdae5fe3044c5f35a05d56d72e1b8a8f3
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
