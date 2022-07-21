@@ -33,6 +33,7 @@ class _LogInVisWidgetState extends State<LogToVisPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xffe4e4e4),
         toolbarHeight: 142,
         title: Row(
