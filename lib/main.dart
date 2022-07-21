@@ -1,24 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-//import 'SignIn.dart' as signin;
+import 'sign_in.dart';
 
 final Widget mysvg = SvgPicture.asset(
   "assets\\LOGO.svg",
   width: 130,
   height: 130,
 );
-
-enum FederationDropDown { itemOne, itemTwo }
-
-enum NewsDropDown { itemOne, itemTwo }
-
-enum TeamsDropDown { itemOne, itemTwo }
-
-enum ClubsDropDown { itemOne, itemTwo }
-
-enum MediaDropDown { itemOne, itemTwo }
-
-enum OthersDropDown { itemOne, itemTwo }
 
 void main() {
   runApp(const MaterialApp(home: MyWidget()));
@@ -714,7 +702,11 @@ class MyWidget extends StatelessWidget {
                   Padding(
                       padding: const EdgeInsets.only(left: 46),
                       child: TextButton(
-                        onPressed: (() => print("asdfklsjfl")),
+                        onPressed: (() => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const SignInPage()))),
                         child: const Text(
                           "РЕГИСТРАЦИЯ\n КОМАНДЫ",
                           textAlign: TextAlign.right,
