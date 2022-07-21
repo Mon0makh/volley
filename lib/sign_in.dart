@@ -2,14 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg", width: 130, height: 130,);
+bool zapomnit = false;
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class SignInPage extends StatefulWidget{
+  const SignInPage({super.key});
+  @override
+  State<StatefulWidget> createState(){
+    return SignInPageState();
+  }
 
+}
+
+class SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: const Color(0xffe4e4e4),
         toolbarHeight: 142,
         title: Row(
@@ -626,49 +635,52 @@ class SignInPage extends StatelessWidget {
                               ),
                             ),
                           ]
-                        )
+                        ),
                       ],
                     ),
                   ),
                 ],
               ),
+                        const SizedBox(width: 350),
             ]
           ),
         ],
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
-        child: ListView(children: <Widget>[
-          Row(
-            children: <Widget>[
-              Container(
-                padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
-                width: 450,
-                height: 650,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: const Color(0xff5d5d5d),
-                    width: 2,
+        child: ListView(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
+                  width: 450,
+                  height: 650,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xff5d5d5d),
+                      width: 2,
+                    ),
+                    color: Colors.white,
                   ),
-                  color: Colors.white,
-                ),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: Column(
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const <Widget>[
-                        Center(
-                            widthFactor: 1,
-                            child: Text(
-                              "Вход в Volley.kz",
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 49, 62, 83),
-                                fontSize: 30,
-                                fontFamily: "Ubuntu",
-                                fontWeight: FontWeight.w500,
-                              ),
-                            )),
-                        Center(
+                      children: <Widget>[
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Вход в Volley.kz",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 49, 62, 83),
+                              fontSize: 30,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )
+                        ),
+                        const Center(
                           widthFactor: 1,
                           child: Text(
                             "Войдите на сайт для управления командой",
@@ -679,11 +691,10 @@ class SignInPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Center(
-                            child: SizedBox(
-                          height: 50,
-                        )),
-                        Center(
+                        const Center(
+                          child: SizedBox(height: 50,)
+                        ),
+                        const Center(
                           widthFactor: 1,
                           child: Text(
                             "Email",
@@ -694,20 +705,122 @@ class SignInPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ]),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "myteam.trainer@volley.kz"),
+                          ),
+                        ),
+                        const Center(
+                            child: SizedBox(height: 20,)
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Password",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "myteam.trainer@volley.kz"),
+                            obscureText: true,
+                          ),
+                        ),
+                        const Center(
+                            child: SizedBox(height: 10,)
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Row(
+                                children: [
+                                  Checkbox(
+                                    value: zapomnit, 
+                                    onChanged: (bool? value){
+                                      setState(() {
+                                        zapomnit = value!;
+                                      });
+                                    }
+                                  ),
+                                  const Text(
+                                    "Запомнить",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 17,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              TextButton(
+                                onPressed: (() => print("Forgot password")), 
+                                child: const Text(
+                                  "Забыли пароль?",
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 20,),
+                        ListView(
+                          shrinkWrap: true,
+                          children: [
+                            ElevatedButton(
+                              onPressed: (() => print("Enter")),
+                              child: const Text("Войти"), 
+                            ),
+                            const SizedBox(height: 10,),
+                            ElevatedButton(
+                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+                              onPressed: (() => print("Enter")),
+                              child: const Text(
+                                "Зарегистрировать команду",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ), 
+                            ),
+                            const SizedBox(height: 10,),
+                            ElevatedButton(
+                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+                              onPressed: (() => print("Enter")),
+                              child: const Text(
+                                "Войти в систему VIS",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                ),
+                              ), 
+                            ),
+                          ],
+                        ),
+                      ]
+                    ),
+                  ),
                 ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 50),
-                child: Image(
-                  image: AssetImage("assets\\SignIn.png"),
-                  width: 600,
-                  height: 800,
+                const Padding(
+                  padding: EdgeInsets.only(left: 50),
+                  child: Image(
+                    image: AssetImage("assets\\SignIn.png"),
+                    width: 600,
+                    height: 800,
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ]),
+              ],
+            ),
+          ]
+        ),
       ),
     );
   }
