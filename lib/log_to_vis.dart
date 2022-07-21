@@ -742,12 +742,11 @@ class _LogInVisWidgetState extends State<LogToVisPage> {
                     Row(mainAxisSize: MainAxisSize.max, children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(50, 40, 0, 0),
+                            const EdgeInsetsDirectional.fromSTEB(50, 0, 0, 0),
                         child: Image(
                           image: const AssetImage('assets\\Devki.png'),
                           width: MediaQuery.of(context).size.width * 0.4,
                           height: MediaQuery.of(context).size.height * 0.9,
-                          fit: BoxFit.cover,
                         ),
                       ),
                       Padding(
