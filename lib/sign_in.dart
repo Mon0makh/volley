@@ -3,12 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg", width: 130, height: 130,);
 
-void main() {
-  runApp(const MaterialApp(home: MyWidget()));
-}
-
-class MyWidget extends StatelessWidget {
-  const MyWidget({Key? key}) : super(key: key);
+class SignInPage extends StatelessWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -636,28 +632,6 @@ class MyWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 46),
-                child: TextButton(
-                  onPressed: (() => print("asdfklsjfl")), 
-                  child: const Text(
-                  "РЕГИСТРАЦИЯ\n КОМАНДЫ",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 17,
-                    fontFamily: "Open Sans",
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              )
-                
-              ),
-              const Padding(
-                padding: EdgeInsets.only(left: 50),
-                child: Icon(Icons.account_box_outlined,
-                size: 120, color: Colors.white),
-              )
             ]
           ),
         ],
@@ -665,26 +639,12 @@ class MyWidget extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
         child: ListView(children: <Widget>[
-          const Padding(
-            padding: EdgeInsets.only(right: 20),
-            child: Image(
-              image: AssetImage("assets\\front_header.png"),
-              width: double.maxFinite,
-            ),
-          ),
           Row(
             children: <Widget>[
-              const Padding(
-                padding: EdgeInsets.only(right: 20),
-                child: Image(
-                  image: AssetImage("assets\\front.png"),
-                  width: 800,
-                  height: 600,
-                ),
-              ),
               Container(
-                width: 335,
-                height: 614,
+                padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
+                width: 450,
+                height: 650,
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: const Color(0xff5d5d5d),
@@ -692,43 +652,63 @@ class MyWidget extends StatelessWidget {
                   ),
                   color: Colors.white,
                 ),
-                child: Column(children: const <Widget>[
-                  Center(
-                    child: Text(
-                      "Последние Новости",
-                      style: TextStyle(
-                        color: Color(0xff17529d),
-                        fontSize: 23,
-                        fontFamily: "Ubuntu",
-                        fontWeight: FontWeight.w500,
-                      ),
-                    )
-                  ),
-                  Center(
-                    child: Text(
-                      "14/07/2022",
-                      style: TextStyle(
-                        color: Color(0xfff2a900),
-                        fontSize: 17,
-                      ),
-                    ),
-                  ),
-                    Center(
-                      child: Text(
-                        "Чемпионат мира-2022. \nЖенщины: Расписание матчей",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const <Widget>[
+                        Center(
+                            widthFactor: 1,
+                            child: Text(
+                              "Вход в Volley.kz",
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 49, 62, 83),
+                                fontSize: 30,
+                                fontFamily: "Ubuntu",
+                                fontWeight: FontWeight.w500,
+                              ),
+                            )),
+                        Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Войдите на сайт для управления командой",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 124, 132, 151),
+                              fontSize: 11,
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  ]),
+                        Center(
+                            child: SizedBox(
+                          height: 50,
+                        )),
+                        Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Email",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ]),
                 ),
-              ],
-            ),
-          ]
-        ),
-      )
+              ),
+              const Padding(
+                padding: EdgeInsets.only(left: 50),
+                child: Image(
+                  image: AssetImage("assets\\SignIn.png"),
+                  width: 600,
+                  height: 800,
+                ),
+              ),
+            ],
+          ),
+        ]),
+      ),
     );
   }
 }
