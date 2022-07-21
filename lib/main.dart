@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'SignIn.dart' as signin;
 
-final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg");
+final Widget mysvg = SvgPicture.asset(
+  "assets\\LOGO.svg",
+  width: 120,
+);
 
 void main() {
   runApp(const MaterialApp(home: MyWidget()));
@@ -117,19 +121,25 @@ class MyWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 50),
-                    child: Text(
-                      "РЕГИСТРАЦИЯ\n КОМАНДЫ",
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 17,
-                        fontFamily: "Open Sans",
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
+                  Padding(
+                      padding: const EdgeInsets.only(left: 50),
+                      child: TextButton(
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const signin.SignInPage())),
+                        child: const Text(
+                          "РЕГИСТРАЦИЯ\n КОМАНДЫ",
+                          textAlign: TextAlign.right,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 17,
+                            fontFamily: "Open Sans",
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      )),
                   const Padding(
                     padding: EdgeInsets.only(left: 50),
                     child: Icon(Icons.account_box_outlined,
