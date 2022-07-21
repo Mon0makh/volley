@@ -79,19 +79,21 @@ class MyWidget extends StatelessWidget {
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
+                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  const Text(
-                                    "Поиск по сайту...",
-                                    style: TextStyle(
-                                      color: Color(0xff5d5d5d),
-                                      fontSize: 17,
-                                      fontFamily: "Open Sans",
-                                      fontWeight: FontWeight.w700,
+                                  TextFormField(
+                                    decoration: const InputDecoration(
+                                      hintText: "Поиск по сайту...",
+                                      hintStyle: TextStyle(
+                                        color: Color(0xff5d5d5d),
+                                        fontSize: 17,
+                                        fontFamily: "Open Sans",
+                                        fontWeight: FontWeight.w700,
+                                      )
                                     ),
                                   ),
-                                  SizedBox(
+                                  /*SizedBox(
                                     width: 27,
                                     height: 32,
                                     child: Container(
@@ -106,7 +108,7 @@ class MyWidget extends StatelessWidget {
                                         color: const Color(0xffd9d9d9),
                                       ),
                                     ),
-                                  ),
+                                  ),*/
                                 ],
                               ),
                             ),

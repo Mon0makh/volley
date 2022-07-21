@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'main_logged.dart';
 
 final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg", width: 130, height: 130,);
 bool zapomnit = false;
+int i = 0;
 
 class SignInPage extends StatefulWidget{
   const SignInPage({super.key});
@@ -646,7 +648,29 @@ class SignInPageState extends State<SignInPage> {
           ),
         ],
       ),
-      body: Padding(
+      body: selector(i),
+    );
+  }
+
+  Widget selector(int i){
+    if(i == 0){
+      return signIn();
+    }
+    if(i == 1){
+      return signUpOne();
+    }
+    if(i == 2){
+      return signUpTwo();
+    }
+    return const SizedBox(
+      height: 800,
+      width: 800,
+      child: Text("404")
+    );
+  }
+
+  Widget signIn(){
+    return Padding(
         padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
         child: ListView(
           children: <Widget>[
@@ -655,7 +679,7 @@ class SignInPageState extends State<SignInPage> {
                 Container(
                   padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
                   width: 450,
-                  height: 650,
+                  height: 800,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color(0xff5d5d5d),
@@ -687,7 +711,9 @@ class SignInPageState extends State<SignInPage> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               color: Color.fromARGB(255, 124, 132, 151),
-                              fontSize: 11,
+                              fontSize: 16,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
@@ -702,6 +728,8 @@ class SignInPageState extends State<SignInPage> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
@@ -722,6 +750,8 @@ class SignInPageState extends State<SignInPage> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
                         ),
@@ -773,35 +803,62 @@ class SignInPageState extends State<SignInPage> {
                             ],
                           ),
                         ),
-                        const SizedBox(height: 20,),
+                        const SizedBox(height: 50,),
                         ListView(
                           shrinkWrap: true,
                           children: [
-                            ElevatedButton(
-                              onPressed: (() => print("Enter")),
-                              child: const Text("Войти"), 
+                            SizedBox(
+                              height: 50,
+                              child: ElevatedButton(
+                                onPressed: (() => Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) => const MyWidget()))),
+                                child: const Text(
+                                  "Войти",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontFamily: "Inter",
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ), 
+                              ),
                             ),
                             const SizedBox(height: 10,),
-                            ElevatedButton(
-                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
-                              onPressed: (() => print("Enter")),
-                              child: const Text(
-                                "Зарегистрировать команду",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
-                              ), 
+                            SizedBox(
+                              height: 50,
+                              child: ElevatedButton(
+                                style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+                                onPressed: (() => setState(() {
+                                  i = 1;
+                                })),
+                                child: const Text(
+                                  "Зарегистрировать команду",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    fontFamily: "Inter",
+                                    fontWeight: FontWeight.w500,
+                                    ),
+                                ), 
+                              ),
                             ),
                             const SizedBox(height: 10,),
-                            ElevatedButton(
-                              style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
-                              onPressed: (() => print("Enter")),
-                              child: const Text(
-                                "Войти в систему VIS",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                ),
-                              ), 
+                            SizedBox(
+                              height: 50,
+                              child: ElevatedButton(
+                                style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+                                onPressed: (() => print("Enter")),
+                                child: const Text(
+                                  "Войти в систему VIS",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    fontFamily: "Inter",
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ), 
+                              ),
                             ),
                           ],
                         ),
@@ -821,7 +878,473 @@ class SignInPageState extends State<SignInPage> {
             ),
           ]
         ),
-      ),
-    );
+      );
+
+  }
+  Widget signUpOne(){
+    return Padding(
+        padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+        child: ListView(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
+                  width: 450,
+                  height: 800,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xff5d5d5d),
+                      width: 2,
+                    ),
+                    color: Colors.white,
+                  ),
+                  child: SizedBox(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Регистрация в Volley.kz",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 49, 62, 83),
+                              fontSize: 30,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Регистрация команды",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 124, 132, 151),
+                              fontSize: 16,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        const Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            "Шаг 1/2",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 25,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w700,
+                            ),
+                            ),
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Email",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "myteam.trainer@volley.kz"),
+                          ),
+                        ),
+                        const SizedBox(height: 5,),
+                        const Center(
+                            child: SizedBox(height: 5,)
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Название команды",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "My Team"),
+                          ),
+                        ),
+                        const Center(
+                            child: SizedBox(height: 5,)
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Регион",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "Алматы"),
+                          ),
+                        ),
+                        const Center(
+                            child: SizedBox(height: 5,)
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "ФИО Тренера",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "Василий Васильков Васильевич"),
+                          ),
+                        ),
+                        const Center(
+                            child: SizedBox(height: 5,)
+                        ),
+                        const SizedBox(height: 20,),
+                        ListView(
+                          shrinkWrap: true,
+                          children: [
+                            const SizedBox(height: 10,),
+                            SizedBox(
+                              width: double.maxFinite,
+                              height: 50,
+                              child: ElevatedButton(
+                                onPressed: (() => setState(() {
+                                  i = 2;
+                                })),
+                                child: const Text(
+                                  "Далее >",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontFamily: "Inter",
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ), 
+                              ),
+                            ),
+                            const SizedBox(height: 10,),
+                            SizedBox(
+                              height: 50,
+                              child: ElevatedButton(
+                                style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+                                onPressed: (() => Navigator.pop(context)),
+                                child: const Text(
+                                  "Отмена",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    fontFamily: "Inter",
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ), 
+                              ),
+                            ), 
+                            const SizedBox(height: 10,),
+                            SizedBox(
+                              height: 50,
+                              child: ElevatedButton(
+                                style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+                                onPressed: (() => showDialog(
+                                  context: context, 
+                                  builder: (BuildContext context){
+                                    return AlertDialog(
+                                      content: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          const Text(
+                                            "Возникли проблемы с регистрацией?",
+                                            style: TextStyle(
+                                              fontFamily: "Ubuntu",
+                                              fontSize: 45,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                          const Text(
+                                            "Оставьте нам свои контакты, и мы поможем",
+                                            style: TextStyle(
+                                              fontFamily: "Ubuntu",
+                                              fontSize: 30,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                          ),
+                                          Column(
+                                            children: [
+                                              const Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  "Ваше имя:",
+                                                  style: TextStyle(
+                                                    fontFamily: "Ubuntu",
+                                                    fontSize: 38,
+                                                    fontWeight: FontWeight.bold
+                                                  ),
+                                                ),
+                                              ),
+                                              TextFormField(
+                                                decoration: const InputDecoration(hintText: "Олег"),
+                                              ),
+                                              const Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  "Ваш номер телефона:",
+                                                  style: TextStyle(
+                                                      fontFamily: "Ubuntu",
+                                                      fontSize: 38,
+                                                      fontWeight: FontWeight.bold
+                                                    ),
+                                                ),
+                                              ),  
+                                              TextFormField(
+                                                decoration: const InputDecoration(hintText: "+7777777777"),
+                                              ),
+                                            ],
+                                          ),
+                                        ]),
+                                    );
+                                  })),
+                                child: const Text(
+                                  "Проблемы при регистрации?",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 16,
+                                    fontFamily: "Inter",
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ), 
+                              ),
+                            ),
+                          ],
+                        ),
+                      ]
+                    ),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 50),
+                  child: Image(
+                    image: AssetImage("assets\\SignIn.png"),
+                    width: 600,
+                    height: 800,
+                  ),
+                ),
+              ],
+            ),
+          ]
+        ),
+      );
+  }
+
+  Widget signUpTwo(){
+    return Padding(
+        padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+        child: ListView(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
+                  width: 450,
+                  height: 800,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xff5d5d5d),
+                      width: 2,
+                    ),
+                    color: Colors.white,
+                  ),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Регистрация в Volley.kz",
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 49, 62, 83),
+                              fontSize: 30,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Регистрация команды",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Color.fromARGB(255, 124, 132, 151),
+                              fontFamily: "Ubuntu",
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                        const Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            "Шаг 2/2",
+                            style: TextStyle(
+                              fontFamily: "Ubuntu",
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Тип",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: "Ubuntu",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "Школьная"),
+                          ),
+                        ),
+                        const Center(
+                            child: SizedBox(height: 20,)
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Пароль",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: "Ubuntu",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "Пароль"),
+                            obscureText: true,
+                          ),
+                        ),
+                        const Center(
+                            child: SizedBox(height: 5,)
+                        ),
+                        const Center(
+                          widthFactor: 1,
+                          child: Text(
+                            "Повторите пароль",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: "Ubuntu",
+                              fontWeight: FontWeight.w500,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        Center(
+                          widthFactor: 1,
+                          child: TextFormField(
+                            decoration: const InputDecoration(hintText: "Пароль"),
+                            obscureText: true,
+                          ),
+                        ),
+                        const SizedBox(height: 50,),
+                        ListView(
+                          shrinkWrap: true,
+                          children: [
+                            SizedBox(
+                              height: 50,
+                              child: ElevatedButton(
+                                onPressed: (() => Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) => const MyWidget())
+                                  )),
+                                child: const Text(
+                                  "Зарегистрироваться",
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontFamily: "Inter",
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                ), 
+                              ),
+                            ),
+                            const SizedBox(height: 10,),
+                            SizedBox(
+                              height: 50,
+                              child: ElevatedButton(
+                                style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+                                onPressed: (() => setState(() {
+                                  i = 0;
+                                })),
+                                child: const Text(
+                                  "Отмена",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 16,
+                                      fontFamily: "Inter",
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                ), 
+                              ),
+                            ),
+                          ],
+                        ),
+                      ]
+                    ),
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 50),
+                  child: Image(
+                    image: AssetImage("assets\\SignIn.png"),
+                    width: 600,
+                    height: 800,
+                  ),
+                ),
+              ],
+            ),
+          ]
+        ),
+      );
   }
 }
