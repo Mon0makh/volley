@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg", width: 130, height: 130,);
+
 void main() {
   runApp(const MaterialApp(home: MyWidget()));
 }
@@ -21,14 +23,7 @@ class MyWidget extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: const Color(0xffe4e4e4),
           toolbarHeight: 142,
-          leading:  Padding(
-                      padding: const EdgeInsets.only(left: 50),
-                      child: SvgPicture.asset(
-                        'assets\\LOGO.svg',
-                        semanticsLabel: 'Volley Logo',
-                        height: 142,
-                        width: 142,
-                      )),
+          leading: mysvg,
           title: const Padding(
                     padding: EdgeInsets.only(left: 50),
                     child: Text(
