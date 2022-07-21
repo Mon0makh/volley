@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg", width: 130, height: 130,);
-
-void main() {
-  runApp(const MaterialApp(home: MyWidget()));
-}
+final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg", width: 142, height: 142,);
 
 enum FederationDropDown{itemOne, itemTwo}
 enum NewsDropDown{itemOne, itemTwo}
@@ -14,6 +10,10 @@ enum ClubsDropDown{itemOne, itemTwo}
 enum MediaDropDown{itemOne, itemTwo}
 enum OthersDropDown{itemOne, itemTwo}
 
+void main() {
+  runApp(const MaterialApp(home: MyWidget()));
+}
+
 class MyWidget extends StatelessWidget {
   const MyWidget({Key? key}) : super(key: key);
 
@@ -21,11 +21,13 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(0xffe4e4e4),
+        backgroundColor: const Color(0xffe4e4e4),
           toolbarHeight: 142,
-          leading: mysvg,
-          title: const Padding(
-                    padding: EdgeInsets.only(left: 50),
+          title: Row(children: [
+            const SizedBox(width: 10),
+            mysvg,
+          const Padding(
+                    padding: EdgeInsets.only(left: 32),
                     child: Text(
                       "ҚАЗАҚСТАНДЫҚ \nВОЛЕЙБОЛ \nФЕДЕРАЦИЯСЫ",
                       style: TextStyle(
@@ -36,6 +38,7 @@ class MyWidget extends StatelessWidget {
                       ),
                     ),
                   ),
+          ],), 
           actions: <Widget>[
             Row(
                 mainAxisSize: MainAxisSize.max,
