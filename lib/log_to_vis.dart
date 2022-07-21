@@ -744,10 +744,13 @@ class _LogInVisWidgetState extends State<LogToVisPage> {
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(50, 0, 0, 0),
-                        child: Image(
-                          image: const AssetImage('assets\\Devki.png'),
-                          width: MediaQuery.of(context).size.width * 0.4,
-                          height: MediaQuery.of(context).size.height * 0.9,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: const Image(
+                            image: AssetImage('assets\\Devki.png'),
+                            width: 575,
+                            height: 800,
+                          ),
                         ),
                       ),
                       Padding(

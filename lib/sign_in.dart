@@ -875,12 +875,15 @@ class SignInPageState extends State<SignInPage> {
                       ]),
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(left: 50),
-                child: Image(
-                  image: AssetImage("assets\\SignIn.png"),
-                  width: 600,
-                  height: 800,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: const Image(
+                    image: AssetImage("assets\\SignIn.png"),
+                    width: 575,
+                    height: 800,
+                  ),
                 ),
               ),
             ],
