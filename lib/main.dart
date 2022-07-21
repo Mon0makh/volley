@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+final Widget mysvg = SvgPicture.asset("assets\\LOGO.svg");
+
 void main() {
   runApp(const MaterialApp(home: MyWidget()));
 }
@@ -21,12 +23,7 @@ class MyWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                      padding: EdgeInsets.only(left: 50),
-                      child: SvgPicture.asset(
-                        'assets/LOGO.svg',
-                        semanticsLabel: 'Volley Logo',
-                        height: 20,
-                      )),
+                      padding: const EdgeInsets.only(left: 10), child: mysvg),
                   const Padding(
                     padding: EdgeInsets.only(left: 50),
                     child: Text(
