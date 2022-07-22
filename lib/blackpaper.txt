@@ -1,10 +1,112 @@
-Text(
-                      "РЕГИСТРАЦИЯ\n КОМАНДЫ",
-                      textAlign: TextAlign.right,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 17,
-                        fontFamily: "Open Sans",
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
+/*PopupMenuItem(
+                                          value: "Международные соревнования",
+                                          child: TextButton(
+                                            onPressed: (() => print(
+                                                "Международные соревнования")),
+                                            child: const Text(
+                                              "Международные соревнования",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 13,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        PopupMenuItem(
+                                          value: "Национальная Лига",
+                                          child: TextButton(
+                                            onPressed: (() =>
+                                                print("Национальная Лига")),
+                                            child: const Text(
+                                              "Национальная Лига",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 13,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        PopupMenuItem(
+                                          value: "Высшая Лига",
+                                          child: TextButton(
+                                            onPressed: (() =>
+                                                print("Высшая Лига")),
+                                            child: const Text(
+                                              "Высшая Лига",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 13,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        PopupMenuItem(
+                                          value: "Высшая Лига U-23",
+                                          child: TextButton(
+                                            onPressed: (() =>
+                                                print("Высшая Лига U-23")),
+                                            child: const Text(
+                                              "Высшая Лига U-23",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 13,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        PopupMenuItem(
+                                          value: "Сборные",
+                                          child: TextButton(
+                                            onPressed: (() => print("Сборные")),
+                                            child: const Text(
+                                              "Сборные",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 13,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        PopupMenuItem(
+                                          value: "Детский волейбол",
+                                          child: TextButton(
+                                            onPressed: (() =>
+                                                print("Детский волейбол")),
+                                            child: const Text(
+                                              "Детский волейбол",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 13,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        PopupMenuItem(
+                                          value: "Федерация",
+                                          child: TextButton(
+                                            onPressed: (() =>
+                                                print("Фередация")),
+                                            child: const Text(
+                                              "Федерация",
+                                              style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize: 13,
+                                                fontFamily: "Open Sans",
+                                                fontWeight: FontWeight.w700,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ]*/

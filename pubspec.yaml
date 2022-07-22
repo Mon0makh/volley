@@ -55,7 +55,23 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  fonts:
+    - family: Ubuntu
+      fonts:
+        - asset: assets\fonts\Ubuntu-B.ttf
+        - asset: assets\fonts\Ubuntu-BI.ttf
+        - asset: assets\fonts\Ubuntu-C.ttf
+        - asset: assets\fonts\Ubuntu-L.ttf
+        - asset: assets\fonts\Ubuntu-LI.ttf
+        - asset: assets\fonts\Ubuntu-M.ttf
+        - asset: assets\fonts\Ubuntu-MI.ttf
+        - asset: assets\fonts\Ubuntu-R.ttf
+        - asset: assets\fonts\Ubuntu-RI.ttf
+        - asset: assets\fonts\Ubuntu-Th.ttf
+        - asset: assets\fonts\UbuntuMono-B.ttf
+        - asset: assets\fonts\UbuntuMono-BI.ttf
+        - asset: assets\fonts\UbuntuMono-R.ttf
+        - asset: assets\fonts\UbuntuMono-RI.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
