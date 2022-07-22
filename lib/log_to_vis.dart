@@ -756,7 +756,7 @@ class _LogInVisWidgetState extends State<LogToVisPage> {
                       Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(200, 0, 50, 0),
-                        child: Container(
+                        child: SizedBox(
                           width: MediaQuery.of(context).size.width * 0.3,
                           child: SizedBox(
                             width: double.infinity,
@@ -815,7 +815,7 @@ class _LogInVisWidgetState extends State<LogToVisPage> {
                                     widthFactor: 1,
                                     child: TextFormField(
                                       decoration: const InputDecoration(
-                                          hintText: "myteam.trainer@volley.kz"),
+                                          hintText: "**********"),
                                       obscureText: true,
                                     ),
                                   ),
