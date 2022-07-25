@@ -1,6 +1,8 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'appbar.dart';
+import 'package:http/http.dart' as http;
 
 bool zapomnit = false;
 int i = 0;
@@ -13,6 +15,14 @@ class SignInPage extends StatefulWidget {
 }
 
 class SignInPageState extends State<SignInPage> {
+  TextEditingController? textController1;
+  TextEditingController? textController2;
+  bool isLoading = false;
+  String error = "";
+  String str = "";
+  setLoading(bool state) =>
+      setState(() => {isLoading = state, i = 3, error = str});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +32,46 @@ class SignInPageState extends State<SignInPage> {
       )),
       body: selector(i),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    textController1 = TextEditingController();
+    textController2 = TextEditingController();
+    error = "";
+  }
+
+  httpPostMain() async {
+    try {
+      str = "";
+      setLoading(true);
+      await httpPost();
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  httpPost() async {
+    print('go https!');
+    try {
+      var response = await http.post(
+          Uri(
+              scheme: 'https',
+              host: 'www.fivb.org',
+              path: '/vis/CheckLogin.aspx'),
+          body: {'U': textController1!.text, 'P': textController2!.text},
+          headers: {'Accept': 'application/xml'});
+
+      print("Response status: ${response.statusCode}");
+      print("Response body: ${response.body}");
+      int first = response.body.indexOf("<Error>");
+      int second = response.body.indexOf("</Error>");
+      str = response.body.substring(first + 7, second);
+    } catch (error) {
+      // ignore: avoid_print
+      print('ERROR $error');
+    }
   }
 
   Widget selector(int i) {
@@ -926,6 +976,7 @@ class SignInPageState extends State<SignInPage> {
                       ),
                       color: Colors.white),
                   child: TextFormField(
+                    controller: textController1,
                     decoration: const InputDecoration(hintText: "visLogin123"),
                   ),
                 ),
@@ -959,20 +1010,21 @@ class SignInPageState extends State<SignInPage> {
                       ),
                       color: Colors.white),
                   child: TextFormField(
+                    controller: textController2,
                     decoration: const InputDecoration(hintText: "Пароль"),
                     obscureText: true,
                   ),
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 50,
+                child: Text(
+                  error,
+                  style: const TextStyle(color: Colors.red, fontSize: 12),
+                ),
               ),
               ElevatedButton(
-                onPressed: (() => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            const Main(logged: true)))),
+                onPressed: isLoading ? null : httpPostMain,
                 child: const Text(
                   "Зарегистрироваться",
                   style: TextStyle(
