@@ -7,6 +7,16 @@ final Widget mysvg = SvgPicture.asset(
   height: 80,
 );
 
+List<OnHoverButton> _mainMenuElemensts(Map<String, Map<String, String>> val, dynamic context) {
+  List<OnHoverButton> buttons = [];
+  for (var item in val.entries) {
+    buttons.add(
+      OnHoverButton(item: item)
+    );
+  }
+  return buttons;
+}
+
 Iterable<PopupMenuItem> _popupButtonsElement(Map<String, String> val) sync* {
   for (var item in val.entries) {
     yield PopupMenuItem(
@@ -26,34 +36,40 @@ Iterable<PopupMenuItem> _popupButtonsElement(Map<String, String> val) sync* {
   }
 }
 
-List<TextButton> _mainMenuElemensts(Map<String, Map<String, String>> val, dynamic context) {
-  List<TextButton> buttons = [];
+// ignore: must_be_immutable
+class OnHoverButton extends StatefulWidget{
+  late MapEntry<String, Map<String, String>> item;
+  OnHoverButton({super.key, required this.item});
 
-  for (var item in val.entries) {
-    buttons.add(
-      TextButton(
-        onPressed: (() => {
-            showMenu(
-              context: context,
-              position: const RelativeRect.fromLTRB(0, 0, 0, 0),
-              items: _popupButtonsElement(item.value).toList(),
-            )
-          }),
-        child: Text(
-          item.key,
-          style: const TextStyle(
-            color: Colors.black,
-            fontSize: 14,
-            fontWeight: FontWeight.w700,
-          ),
-        )
-      )
-    );
-  }
-  return buttons;
+  @override
+  State<OnHoverButton> createState() => OnHoverButtonState();
 }
 
-
+class OnHoverButtonState extends State<OnHoverButton>{
+  final buttonKey = GlobalKey();
+  @override
+  Widget build(BuildContext context){
+    return MouseRegion(
+      key: buttonKey,
+      onEnter: (event){
+        showMenu(
+          useRootNavigator: true,
+          context: context, 
+          position: RelativeRect.fromSize(buttonKey.globalPaintBounds!, Size.infinite),
+          items: _popupButtonsElement(widget.item.value).toList(),
+        );
+      },  
+      child: Text(
+        "${widget.item.key}  |  ",
+        style: const TextStyle(
+          color: Colors.black,
+          fontSize: 14,
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+    );
+  }
+}
 
 // ignore: must_be_immutable
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -211,9 +227,22 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                 ],
               ),
-              child,
+              child
             ]),
       ],
     );
+  }
+}
+
+extension GlobalKeyExtension on GlobalKey {
+  Rect? get globalPaintBounds {
+    final renderObject = currentContext?.findRenderObject();
+    final translation = renderObject?.getTransformTo(null).getTranslation();
+    if (translation != null && renderObject?.paintBounds != null) {
+      final offset = Offset(translation.x, translation.y);
+      return renderObject!.paintBounds.shift(offset);
+    } else {
+      return null;
+    }
   }
 }
