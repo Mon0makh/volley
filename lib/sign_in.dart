@@ -18,10 +18,10 @@ class SignInPageState extends State<SignInPage> {
   TextEditingController? textController1;
   TextEditingController? textController2;
   bool isLoading = false;
-  String error = "";
+  String myerror = "";
   String str = "";
   setLoading(bool state) =>
-      setState(() => {isLoading = state, i = 3, error = str});
+      setState(() => {isLoading = state, i = 3, myerror = str});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,6 @@ class SignInPageState extends State<SignInPage> {
     super.initState();
     textController1 = TextEditingController();
     textController2 = TextEditingController();
-    error = "";
   }
 
   httpPostMain() async {
@@ -65,12 +64,17 @@ class SignInPageState extends State<SignInPage> {
 
       print("Response status: ${response.statusCode}");
       print("Response body: ${response.body}");
-      int first = response.body.indexOf("<Error>");
-      int second = response.body.indexOf("</Error>");
-      str = response.body.substring(first + 7, second);
+      if (response.statusCode == 500) {
+        str = "Возникла ошибка в сервере, попробуйте позже!";
+      } else {
+        int first = response.body.indexOf("<Error>");
+        int second = response.body.indexOf("</Error>");
+        str = response.body.substring(first + 7, second);
+      }
     } catch (error) {
       // ignore: avoid_print
       print('ERROR $error');
+      str = '$error';
     }
   }
 
@@ -1019,7 +1023,7 @@ class SignInPageState extends State<SignInPage> {
               SizedBox(
                 height: 50,
                 child: Text(
-                  error,
+                  myerror,
                   style: const TextStyle(color: Colors.red, fontSize: 12),
                 ),
               ),
