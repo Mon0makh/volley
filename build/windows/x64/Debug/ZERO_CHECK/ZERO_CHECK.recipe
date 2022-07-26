@@ -2,7 +2,11 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
+      <FullPath>C:\volley\build\windows\x64\Debug\ZERO_CHECK</FullPath>
+=======
       <FullPath>C:\Users\Фархад\Desktop\volley\build\windows\x64\Debug\ZERO_CHECK</FullPath>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

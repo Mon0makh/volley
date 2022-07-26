@@ -2,10 +2,17 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< HEAD
+      <FullPath>C:\volley\build\windows\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\volley\build\windows\flutter\x64\Debug\flutter_assemble</FullPath>
+=======
       <FullPath>C:\Users\Фархад\Desktop\volley\build\windows\x64\Debug\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
       <FullPath>C:\Users\Фархад\Desktop\volley\build\windows\flutter\x64\Debug\flutter_assemble</FullPath>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

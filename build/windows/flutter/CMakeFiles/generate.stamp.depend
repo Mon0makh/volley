@@ -1,3 +1,8 @@
 # CMake generation dependency list for this directory.
+<<<<<<< HEAD
+C:/volley/windows/flutter/CMakeLists.txt
+C:/volley/windows/flutter/ephemeral/generated_config.cmake
+=======
 C:/Users/Фархад/Desktop/volley/windows/flutter/CMakeLists.txt
 C:/Users/Фархад/Desktop/volley/windows/flutter/ephemeral/generated_config.cmake
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
