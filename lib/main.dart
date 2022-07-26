@@ -93,7 +93,7 @@ class Main extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(bottom: 20),
               child: Image(
-                image: AssetImage("assets\\front_header.png"),
+                image: AssetImage("assets/front_header.png"),
                 width: double.maxFinite,
               ),
             ),
@@ -104,7 +104,7 @@ class Main extends StatelessWidget {
                   width: 845,
                   padding: const EdgeInsets.only(right: 0),
                   child: const Image(
-                    image: AssetImage("assets\\front.png"),
+                    image: AssetImage("assets/front.png"),
                   ),
                 ),
                 Container(

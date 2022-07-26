@@ -345,7 +345,7 @@ class SignInPageState extends State<SignInPage> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(50),
             child: const Image(
-              image: AssetImage("assets\\SignIn.png"),
+              image: AssetImage("assets/SignIn.png"),
               width: 575,
               height: 800,
             ),
@@ -717,7 +717,7 @@ class SignInPageState extends State<SignInPage> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(50),
             child: const Image(
-              image: AssetImage("assets\\SignIn.png"),
+              image: AssetImage("assets/SignIn.png"),
               width: 575,
               height: 800,
             ),
@@ -945,7 +945,7 @@ class SignInPageState extends State<SignInPage> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(50),
             child: const Image(
-              image: AssetImage("assets\\SignIn.png"),
+              image: AssetImage("assets/SignIn.png"),
               width: 575,
               height: 800,
             ),
@@ -962,7 +962,7 @@ class SignInPageState extends State<SignInPage> {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(50),
           child: const Image(
-            image: AssetImage("assets\\Devki.png"),
+            image: AssetImage("assets/Devki.png"),
             width: 575,
             height: 800,
           ),
