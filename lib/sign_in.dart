@@ -66,8 +66,17 @@ class SignInPageState extends State<SignInPage> {
               scheme: 'https',
               host: 'www.fivb.org',
               path: '/vis/CheckLogin.aspx'),
-          body: {'U': textController1!.text, 'P': textController2!.text},
-          headers: {'Accept': 'application/xml'});
+          body: {
+            'U': textController1!.text,
+            'P': textController2!.text
+          },
+          headers: {
+            'Accept': 'application/xml',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': '*',
+            'Access-Control-Allow-Methods': '*',
+            'Access-Control-Allow-Credentials': 'true',
+          });
 
       debugPrint("Response status: ${response.statusCode}");
       debugPrint("Response body: ${response.body}");
