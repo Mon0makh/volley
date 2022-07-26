@@ -72,7 +72,10 @@ class SignInPageState extends State<SignInPage> {
           },
           headers: {
             'Accept': 'application/xml',
-            "Access-Control-Allow-Origin": "*"
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': '*',
+            'Access-Control-Allow-Methods': '*',
+            'Access-Control-Allow-Credentials': 'true',
           });
 
       debugPrint("Response status: ${response.statusCode}");
