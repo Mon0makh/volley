@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+=======
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -18,11 +22,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
+<<<<<<< HEAD
     <ProjectGuid>{CA44F146-29F9-3C1E-8C29-0811CF34FA67}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <Platform>x64</Platform>
+=======
+    <ProjectGuid>{ABECE387-DCDF-35D9-9568-6163B28B75B7}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
@@ -30,17 +41,29 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
+<<<<<<< HEAD
     <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
+<<<<<<< HEAD
     <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
+<<<<<<< HEAD
     <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -86,11 +109,19 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <CustomBuild Include="C:\volley\windows\runner\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/volley/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/volley/windows -BC:/volley/build/windows --check-stamp-file C:/volley/build/windows/runner/CMakeFiles/generate.stamp
+=======
+    <CustomBuild Include="C:\Users\Фархад\Desktop\volley\windows\runner\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Фархад/Desktop/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Фархад/Desktop/volley/windows -BC:/Users/Фархад/Desktop/volley/build/windows --check-stamp-file C:/Users/Фархад/Desktop/volley/build/windows/runner/CMakeFiles/generate.stamp
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -99,11 +130,19 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/volley/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
 "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/volley/windows -BC:/volley/build/windows --check-stamp-file C:/volley/build/windows/runner/CMakeFiles/generate.stamp
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/Users/Фархад/Desktop/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Фархад/Desktop/volley/windows -BC:/Users/Фархад/Desktop/volley/build/windows --check-stamp-file C:/Users/Фархад/Desktop/volley/build/windows/runner/CMakeFiles/generate.stamp
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -112,11 +151,19 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/volley/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/volley/windows -BC:/volley/build/windows --check-stamp-file C:/volley/build/windows/runner/CMakeFiles/generate.stamp
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Фархад/Desktop/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Фархад/Desktop/volley/windows -BC:/Users/Фархад/Desktop/volley/build/windows --check-stamp-file C:/Users/Фархад/Desktop/volley/build/windows/runner/CMakeFiles/generate.stamp
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -125,21 +172,35 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="C:\volley\build\windows\ZERO_CHECK.vcxproj">
       <Project>{7233A938-1DD3-37C2-ADD3-5BC1C016DA45}</Project>
+=======
+    <ProjectReference Include="C:\Users\Фархад\Desktop\volley\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{2082AAB1-6390-3C6D-9F21-151A4F5C31FB}</Project>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+<<<<<<< HEAD
     <ProjectReference Include="C:\volley\build\windows\runner\volley.vcxproj">
       <Project>{6E5F0394-F189-39A1-80AB-7255ADFBF4F1}</Project>
+=======
+    <ProjectReference Include="C:\Users\Фархад\Desktop\volley\build\windows\runner\volley.vcxproj">
+      <Project>{DDAD759E-246A-39B4-9614-4DA54CD8BC51}</Project>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
       <Name>volley</Name>
     </ProjectReference>
   </ItemGroup>

@@ -57,20 +57,20 @@ flutter:
   fonts:
     - family: Ubuntu
       fonts:
-        - asset: assets\fonts\Ubuntu-B.ttf
-        - asset: assets\fonts\Ubuntu-BI.ttf
-        - asset: assets\fonts\Ubuntu-C.ttf
-        - asset: assets\fonts\Ubuntu-L.ttf
-        - asset: assets\fonts\Ubuntu-LI.ttf
-        - asset: assets\fonts\Ubuntu-M.ttf
-        - asset: assets\fonts\Ubuntu-MI.ttf
-        - asset: assets\fonts\Ubuntu-R.ttf
-        - asset: assets\fonts\Ubuntu-RI.ttf
-        - asset: assets\fonts\Ubuntu-Th.ttf
-        - asset: assets\fonts\UbuntuMono-B.ttf
-        - asset: assets\fonts\UbuntuMono-BI.ttf
-        - asset: assets\fonts\UbuntuMono-R.ttf
-        - asset: assets\fonts\UbuntuMono-RI.ttf
+        - asset: assets/fonts/Ubuntu-B.ttf
+        - asset: assets/fonts/Ubuntu-BI.ttf
+        - asset: assets/fonts/Ubuntu-C.ttf
+        - asset: assets/fonts/Ubuntu-L.ttf
+        - asset: assets/fonts/Ubuntu-LI.ttf
+        - asset: assets/fonts/Ubuntu-M.ttf
+        - asset: assets/fonts/Ubuntu-MI.ttf
+        - asset: assets/fonts/Ubuntu-R.ttf
+        - asset: assets/fonts/Ubuntu-RI.ttf
+        - asset: assets/fonts/Ubuntu-Th.ttf
+        - asset: assets/fonts/UbuntuMono-B.ttf
+        - asset: assets/fonts/UbuntuMono-BI.ttf
+        - asset: assets/fonts/UbuntuMono-R.ttf
+        - asset: assets/fonts/UbuntuMono-RI.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -78,12 +78,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets\front.png
-    - assets\front_header.png
-    - assets\LOGO.svg
-    - assets\UserIcon.svg
-    - assets\SignIn.png
-    - assets\Devki.png
+    - assets/front.png
+    - assets/front_header.png
+    - assets/LOGO.svg
+    - assets/UserIcon.svg
+    - assets/SignIn.png
+    - assets/Devki.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,13 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <CustomBuild Include="C:\volley\build\windows\CMakeFiles\ce550ff093435537c57fb7dc7c5390a7\INSTALL_force.rule">
+=======
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Фархад\Desktop\volley\build\windows\CMakeFiles\7877bbdcfed100a5d00b83b930b9ce46\INSTALL_force.rule">
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
+<<<<<<< HEAD
       <UniqueIdentifier>{8D9E7E13-2BD3-39DA-840B-74A4E6AA4042}</UniqueIdentifier>
+=======
+      <UniqueIdentifier>{56901BD0-630E-3549-950E-98DCD0FC4920}</UniqueIdentifier>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
     </Filter>
   </ItemGroup>
 </Project>

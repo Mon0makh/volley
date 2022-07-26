@@ -182,7 +182,8 @@ class SignInPageState extends State<SignInPage> {
                       child: TextFormField(
                         decoration: const InputDecoration(
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.only(left: 10),
+                            contentPadding:
+                                EdgeInsets.only(left: 10, bottom: 10),
                             hintText: "myteam.trainer@volley.kz"),
                       ),
                     ),
@@ -218,7 +219,8 @@ class SignInPageState extends State<SignInPage> {
                       child: TextFormField(
                         decoration: const InputDecoration(
                             border: InputBorder.none,
-                            contentPadding: EdgeInsets.only(left: 10),
+                            contentPadding:
+                                EdgeInsets.only(left: 10, bottom: 10),
                             hintText: "**********"),
                         obscureText: true,
                       ),
@@ -345,7 +347,7 @@ class SignInPageState extends State<SignInPage> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(50),
             child: const Image(
-              image: AssetImage("assets\\SignIn.png"),
+              image: AssetImage("assets/SignIn.png"),
               width: 575,
               height: 800,
             ),
@@ -717,7 +719,7 @@ class SignInPageState extends State<SignInPage> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(50),
             child: const Image(
-              image: AssetImage("assets\\SignIn.png"),
+              image: AssetImage("assets/SignIn.png"),
               width: 575,
               height: 800,
             ),
@@ -945,7 +947,7 @@ class SignInPageState extends State<SignInPage> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(50),
             child: const Image(
-              image: AssetImage("assets\\SignIn.png"),
+              image: AssetImage("assets/SignIn.png"),
               width: 575,
               height: 800,
             ),
@@ -962,7 +964,7 @@ class SignInPageState extends State<SignInPage> {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(50),
           child: const Image(
-            image: AssetImage("assets\\Devki.png"),
+            image: AssetImage("assets/Devki.png"),
             width: 575,
             height: 800,
           ),
@@ -1021,7 +1023,7 @@ class SignInPageState extends State<SignInPage> {
                     controller: textController1,
                     decoration: const InputDecoration(
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.only(left: 10),
+                      contentPadding: EdgeInsets.only(left: 10, bottom: 10),
                       hintText: "visLogin123",
                     ),
                   ),
@@ -1058,7 +1060,7 @@ class SignInPageState extends State<SignInPage> {
                     controller: textController2,
                     decoration: const InputDecoration(
                         border: InputBorder.none,
-                        contentPadding: EdgeInsets.only(left: 10),
+                        contentPadding: EdgeInsets.only(left: 10, bottom: 10),
                         hintText: "Пароль"),
                     obscureText: true,
                   ),

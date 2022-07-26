@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 ^C:\VOLLEY\BUILD\WINDOWS\CMAKEFILES\9C1CE67CB0F8FCB4349BADB439C0FFFC\GENERATE.STAMP.RULE
 setlocal
 "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/volley/windows -BC:/volley/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/volley/build/windows/volley.sln
+=======
+^C:\USERS\ФАРХАД\DESKTOP\VOLLEY\BUILD\WINDOWS\CMAKEFILES\B53D348CB0158B6DCBBD1B2F68E36C5C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Фархад/Desktop/volley/windows -BC:/Users/Фархад/Desktop/volley/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Фархад/Desktop/volley/build/windows/volley.sln
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:/volley/build/windows/runner/Debug/data/icudtl.dat
 C:/volley/build/windows/runner/Debug/flutter_windows.dll
 C:/volley/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
@@ -27,3 +28,34 @@ C:/volley/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
 C:/volley/build/windows/runner/Debug/data/flutter_assets/NOTICES
 C:/volley/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
 C:/volley/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+=======
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/icudtl.dat
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/flutter_windows.dll
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/Devki.png
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-B.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-BI.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-C.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-L.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-LI.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-M.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-MI.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-R.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-RI.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/Ubuntu-Th.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/UbuntuMono-B.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/UbuntuMono-BI.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/UbuntuMono-R.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/fonts/UbuntuMono-RI.ttf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/front.png
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/front_header.png
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/LOGO.svg
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/SignIn.png
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/assets/UserIcon.svg
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/NOTICES
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63

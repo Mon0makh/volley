@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: C:/volley/windows/runner
+=======
+# Install script for directory: C:/Users/Фархад/Desktop/volley/windows/runner
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

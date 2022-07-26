@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
@@ -11,10 +12,25 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc">
+=======
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc">
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <CustomBuild Include="C:\volley\windows\flutter\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -23,6 +39,16 @@
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{3676E0C7-5602-3502-A89A-61DC03D90B34}</UniqueIdentifier>
+=======
+    <CustomBuild Include="C:\Users\Фархад\Desktop\volley\windows\flutter\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{56901BD0-630E-3549-950E-98DCD0FC4920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{742C3A59-748B-3F1A-A724-8CB4D3AA3645}</UniqueIdentifier>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
     </Filter>
   </ItemGroup>
 </Project>

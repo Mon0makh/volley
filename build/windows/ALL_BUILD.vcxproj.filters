@@ -1,7 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <CustomBuild Include="C:\volley\windows\CMakeLists.txt" />
+=======
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Фархад\Desktop\volley\windows\CMakeLists.txt" />
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
