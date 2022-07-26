@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'appbar.dart';
@@ -26,11 +25,19 @@ class SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: MyAppBar(
           child: const SizedBox(
         width: 350,
       )),
-      body: selector(i),
+      body: ListView(
+        children: [
+          const SizedBox(
+            height: 50,
+          ),
+          selector(i),
+        ],
+      ),
     );
   }
 
@@ -52,7 +59,7 @@ class SignInPageState extends State<SignInPage> {
   }
 
   httpPost() async {
-    print('go https!');
+    debugPrint('go https!');
     try {
       var response = await http.post(
           Uri(
@@ -62,8 +69,8 @@ class SignInPageState extends State<SignInPage> {
           body: {'U': textController1!.text, 'P': textController2!.text},
           headers: {'Accept': 'application/xml'});
 
-      print("Response status: ${response.statusCode}");
-      print("Response body: ${response.body}");
+      debugPrint("Response status: ${response.statusCode}");
+      debugPrint("Response body: ${response.body}");
       if (response.statusCode == 500) {
         str = "Возникла ошибка в сервере, попробуйте позже!";
       } else {
@@ -73,7 +80,7 @@ class SignInPageState extends State<SignInPage> {
       }
     } catch (error) {
       // ignore: avoid_print
-      print('ERROR $error');
+      debugPrint('ERROR $error');
       str = '$error';
     }
   }
@@ -111,13 +118,6 @@ class SignInPageState extends State<SignInPage> {
           padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
           width: 450,
           height: 800,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: const Color(0xff5d5d5d),
-              width: 2,
-            ),
-            color: Colors.white,
-          ),
           child: SizedBox(
             width: double.infinity,
             child: Column(
@@ -181,6 +181,8 @@ class SignInPageState extends State<SignInPage> {
                           color: Colors.white),
                       child: TextFormField(
                         decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(left: 10),
                             hintText: "myteam.trainer@volley.kz"),
                       ),
                     ),
@@ -214,8 +216,10 @@ class SignInPageState extends State<SignInPage> {
                           ),
                           color: Colors.white),
                       child: TextFormField(
-                        decoration:
-                            const InputDecoration(hintText: "**********"),
+                        decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(left: 10),
+                            hintText: "**********"),
                         obscureText: true,
                       ),
                     ),
@@ -358,13 +362,6 @@ class SignInPageState extends State<SignInPage> {
           padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
           width: 450,
           height: 800,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: const Color(0xff5d5d5d),
-              width: 2,
-            ),
-            color: Colors.white,
-          ),
           child: SizedBox(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -393,6 +390,9 @@ class SignInPageState extends State<SignInPage> {
                     ),
                   ),
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
                 const Align(
                   alignment: Alignment.centerRight,
                   child: Text(
@@ -404,6 +404,9 @@ class SignInPageState extends State<SignInPage> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 const Center(
                   widthFactor: 1,
@@ -432,6 +435,8 @@ class SignInPageState extends State<SignInPage> {
                         color: Colors.white),
                     child: TextFormField(
                       decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(left: 10),
                           hintText: "myteam.trainer@volley.kz"),
                     ),
                   ),
@@ -465,7 +470,10 @@ class SignInPageState extends State<SignInPage> {
                         ),
                         color: Colors.white),
                     child: TextFormField(
-                      decoration: const InputDecoration(hintText: "My Team"),
+                      decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(left: 10),
+                          hintText: "My Team"),
                     ),
                   ),
                 ),
@@ -498,7 +506,10 @@ class SignInPageState extends State<SignInPage> {
                         ),
                         color: Colors.white),
                     child: TextFormField(
-                      decoration: const InputDecoration(hintText: "Алматы"),
+                      decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(left: 10),
+                          hintText: "Алматы"),
                     ),
                   ),
                 ),
@@ -532,6 +543,8 @@ class SignInPageState extends State<SignInPage> {
                         color: Colors.white),
                     child: TextFormField(
                       decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(left: 10),
                           hintText: "Василий Васильков Васильевич"),
                     ),
                   ),
@@ -635,6 +648,9 @@ class SignInPageState extends State<SignInPage> {
                                       ),
                                       TextFormField(
                                         decoration: const InputDecoration(
+                                            border: InputBorder.none,
+                                            contentPadding:
+                                                EdgeInsets.only(left: 10),
                                             hintText: "Олег"),
                                       ),
                                       const Align(
@@ -649,8 +665,33 @@ class SignInPageState extends State<SignInPage> {
                                       ),
                                       TextFormField(
                                         decoration: const InputDecoration(
-                                            hintText: "+7777777777"),
+                                            border: InputBorder.none,
+                                            contentPadding:
+                                                EdgeInsets.only(left: 10),
+                                            hintText: "+7 777 777 7777"),
                                       ),
+                                      const SizedBox(
+                                        height: 20,
+                                      ),
+                                      SizedBox(
+                                          height: 50,
+                                          width: double.maxFinite,
+                                          child: Center(
+                                              heightFactor: 1,
+                                              widthFactor: 1,
+                                              child: OutlinedButton(
+                                                  style: ButtonStyle(
+                                                      backgroundColor:
+                                                          MaterialStateProperty
+                                                              .all<Color>(
+                                                                  Colors.blue)),
+                                                  onPressed: null,
+                                                  child: const Text(
+                                                    "Позвоните мне!",
+                                                    style: TextStyle(
+                                                        fontSize: 16,
+                                                        color: Colors.white),
+                                                  ))))
                                     ],
                                   ),
                                 ]),
@@ -693,13 +734,6 @@ class SignInPageState extends State<SignInPage> {
           padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
           width: 450,
           height: 800,
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: const Color(0xff5d5d5d),
-              width: 2,
-            ),
-            color: Colors.white,
-          ),
           child: SizedBox(
             width: double.infinity,
             child: Column(
@@ -728,6 +762,9 @@ class SignInPageState extends State<SignInPage> {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   const Align(
                     alignment: Alignment.centerRight,
                     child: Text(
@@ -738,6 +775,9 @@ class SignInPageState extends State<SignInPage> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
+                  ),
+                  const SizedBox(
+                    height: 20,
                   ),
                   const Center(
                     widthFactor: 1,
@@ -765,7 +805,10 @@ class SignInPageState extends State<SignInPage> {
                           ),
                           color: Colors.white),
                       child: TextFormField(
-                        decoration: const InputDecoration(hintText: "Школьная"),
+                        decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(left: 10),
+                            hintText: "Школьная"),
                       ),
                     ),
                   ),
@@ -798,7 +841,10 @@ class SignInPageState extends State<SignInPage> {
                           ),
                           color: Colors.white),
                       child: TextFormField(
-                        decoration: const InputDecoration(hintText: "Пароль"),
+                        decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(left: 10),
+                            hintText: "Пароль"),
                         obscureText: true,
                       ),
                     ),
@@ -832,7 +878,10 @@ class SignInPageState extends State<SignInPage> {
                           ),
                           color: Colors.white),
                       child: TextFormField(
-                        decoration: const InputDecoration(hintText: "Пароль"),
+                        decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(left: 10),
+                            hintText: "Пароль"),
                         obscureText: true,
                       ),
                     ),
@@ -858,7 +907,6 @@ class SignInPageState extends State<SignInPage> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
-                          fontFamily: "Inter",
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -884,7 +932,6 @@ class SignInPageState extends State<SignInPage> {
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 16,
-                          fontFamily: "Inter",
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -922,19 +969,12 @@ class SignInPageState extends State<SignInPage> {
         ),
       ),
       const SizedBox(
-        width: 50,
+        width: 20,
       ),
       Container(
         padding: const EdgeInsets.only(right: 50, left: 50, top: 100),
         width: 450,
         height: 800,
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: const Color(0xff5d5d5d),
-            width: 2,
-          ),
-          color: Colors.white,
-        ),
         child: SizedBox(
           width: double.maxFinite,
           child: Column(
@@ -947,7 +987,6 @@ class SignInPageState extends State<SignInPage> {
                     style: TextStyle(
                       color: Color.fromARGB(255, 49, 62, 83),
                       fontSize: 30,
-                      fontFamily: "Ubuntu",
                       fontWeight: FontWeight.w500,
                     ),
                   )),
@@ -961,7 +1000,6 @@ class SignInPageState extends State<SignInPage> {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     color: Colors.black,
-                    fontFamily: "Ubuntu",
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                   ),
@@ -981,7 +1019,11 @@ class SignInPageState extends State<SignInPage> {
                       color: Colors.white),
                   child: TextFormField(
                     controller: textController1,
-                    decoration: const InputDecoration(hintText: "visLogin123"),
+                    decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.only(left: 10),
+                      hintText: "visLogin123",
+                    ),
                   ),
                 ),
               ),
@@ -995,7 +1037,6 @@ class SignInPageState extends State<SignInPage> {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     color: Colors.black,
-                    fontFamily: "Ubuntu",
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                   ),
@@ -1015,7 +1056,10 @@ class SignInPageState extends State<SignInPage> {
                       color: Colors.white),
                   child: TextFormField(
                     controller: textController2,
-                    decoration: const InputDecoration(hintText: "Пароль"),
+                    decoration: const InputDecoration(
+                        border: InputBorder.none,
+                        contentPadding: EdgeInsets.only(left: 10),
+                        hintText: "Пароль"),
                     obscureText: true,
                   ),
                 ),
@@ -1027,14 +1071,17 @@ class SignInPageState extends State<SignInPage> {
                   style: const TextStyle(color: Colors.red, fontSize: 12),
                 ),
               ),
-              ElevatedButton(
-                onPressed: isLoading ? null : httpPostMain,
-                child: const Text(
-                  "Зарегистрироваться",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontFamily: "Inter",
-                    fontWeight: FontWeight.w500,
+              SizedBox(
+                height: 50,
+                width: double.maxFinite,
+                child: ElevatedButton(
+                  onPressed: isLoading ? null : httpPostMain,
+                  child: const Text(
+                    "Войти",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),
@@ -1042,6 +1089,7 @@ class SignInPageState extends State<SignInPage> {
                 height: 10,
               ),
               SizedBox(
+                width: double.maxFinite,
                 height: 50,
                 child: ElevatedButton(
                   style: ButtonStyle(
@@ -1057,7 +1105,6 @@ class SignInPageState extends State<SignInPage> {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,
-                      fontFamily: "Inter",
                       fontWeight: FontWeight.w500,
                     ),
                   ),

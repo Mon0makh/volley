@@ -17,18 +17,21 @@ List<OnHoverButton> _mainMenuElemensts(Map<String, Map<String, String>> val, dyn
   return buttons;
 }
 
-Iterable<PopupMenuItem> _popupButtonsElement(Map<String, String> val) sync* {
+Iterable<PopupMenuItem> _popupButtonsElement(Map<String, String> val, BuildContext context) sync* {
   for (var item in val.entries) {
     yield PopupMenuItem(
       value: item.key,
-      child: TextButton(
-        onPressed: null,
-        child: Text(
-          item.key,
-          style: const TextStyle(
-            color: Colors.black,
-            fontSize: 13,
-            fontWeight: FontWeight.w700,
+      child: MouseRegion(
+        onExit: (event) => Navigator.pop(context),
+        child: TextButton(
+          onPressed: null,
+          child: Text(
+            item.key,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 13,
+              fontWeight: FontWeight.w700,
+            ),
           ),
         ),
       ),
@@ -56,9 +59,9 @@ class OnHoverButtonState extends State<OnHoverButton>{
           useRootNavigator: true,
           context: context, 
           position: RelativeRect.fromSize(buttonKey.globalPaintBounds!, Size.infinite),
-          items: _popupButtonsElement(widget.item.value).toList(),
+          items: _popupButtonsElement(widget.item.value, context).toList(),
         );
-      },  
+      },
       child: Text(
         "${widget.item.key}  |  ",
         style: const TextStyle(
