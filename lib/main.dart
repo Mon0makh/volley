@@ -66,7 +66,7 @@ class Main extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const SignInPage()))),
+                                  SignInPage()))),
                         child: Row(
                           children: const [
                             Text(
@@ -153,7 +153,9 @@ class Main extends StatelessWidget {
                 ),
               ],
             ),
-          ]),
-        ));
+          ]
+        ),
+      )
+    );
   }
 }

@@ -4,16 +4,16 @@ import 'appbar.dart';
 import 'package:http/http.dart' as http;
 
 bool zapomnit = false;
-int i = 0;
 
 class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+  SignInPage({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => SignInPageState();
 }
 
 class SignInPageState extends State<SignInPage> {
+  int i = 0;
   TextEditingController? textController1;
   TextEditingController? textController2;
   bool isLoading = false;
@@ -35,7 +35,7 @@ class SignInPageState extends State<SignInPage> {
           const SizedBox(
             height: 20,
           ),
-          selector(i),
+          selector(),
         ],
       ),
     );
@@ -94,8 +94,9 @@ class SignInPageState extends State<SignInPage> {
     }
   }
 
-  Widget selector(int i) {
+  Widget selector() {
     if (i == 0) {
+      debugPrint("first ${i.toString()}");
       return Row(
         children: [
           sign(
@@ -117,6 +118,7 @@ class SignInPageState extends State<SignInPage> {
                             setState(() {
                               zapomnit = value!;
                             });
+                            debugPrint(zapomnit.toString());
                           }
                         ),
                         const Text(
@@ -178,10 +180,11 @@ class SignInPageState extends State<SignInPage> {
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.white)
                     ),
                     onPressed: (() {
+                      debugPrint("second ${i.toString()}");
                       setState(() {
                         i = 1;
                       });
-                      debugPrint(i.toString());
+                      debugPrint("third ${i.toString()}");
                     }),
                     child: const Text(
                       "Зарегистрировать команду",
@@ -239,6 +242,8 @@ class SignInPageState extends State<SignInPage> {
       );
     }
     if (i == 1) {
+      debugPrint(i.toString());
+      debugPrint("return step 1");
       return Row(
         children: [
           sign(
@@ -421,6 +426,8 @@ class SignInPageState extends State<SignInPage> {
       );
     }
     if (i == 2) {
+      debugPrint(i.toString());
+      debugPrint("return step 2");
       return Row(
         children: [
           sign(
@@ -498,6 +505,8 @@ class SignInPageState extends State<SignInPage> {
       );
     }
     if (i == 3) {
+      debugPrint(i.toString());
+      debugPrint("return VIS");
       return Row(
         children: [
           Padding(
