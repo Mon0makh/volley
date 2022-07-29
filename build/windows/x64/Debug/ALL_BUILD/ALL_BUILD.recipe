@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+<<<<<<< HEAD
+      <FullPath>C:\volley\build\windows\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\volley\build\windows\flutter\x64\Debug\flutter_assemble</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\volley\build\windows\runner\Debug\volley.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\volley\build\windows\x64\Debug\ALL_BUILD</FullPath>
+=======
+      <FullPath>C:\Users\Фархад\Desktop\volley\build\windows\x64\Debug\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Фархад\Desktop\volley\build\windows\flutter\x64\Debug\flutter_assemble</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Фархад\Desktop\volley\build\windows\runner\Debug\volley.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Фархад\Desktop\volley\build\windows\x64\Debug\ALL_BUILD</FullPath>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

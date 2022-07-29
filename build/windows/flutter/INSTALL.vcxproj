@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+=======
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|x64">
+      <Configuration>Profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+<<<<<<< HEAD
+    <ProjectGuid>{8B265CD7-A40A-367A-9D65-4B2BDC06FBB5}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <Platform>x64</Platform>
+=======
+    <ProjectGuid>{64010658-DF17-3F9E-9136-37480D5E3DF0}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+    <ProjectName>INSTALL</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+<<<<<<< HEAD
+    <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+<<<<<<< HEAD
+    <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+<<<<<<< HEAD
+    <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+<<<<<<< HEAD
+    <PostBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+=======
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+<<<<<<< HEAD
+    <PostBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+=======
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+<<<<<<< HEAD
+    <PostBuildEvent>
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+=======
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message></Message>
+      <Command>setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+<<<<<<< HEAD
+    <CustomBuild Include="C:\volley\build\windows\CMakeFiles\8d2330810048dce3ae04411cc9690e57\INSTALL_force.rule">
+=======
+    <CustomBuild Include="C:\Users\Фархад\Desktop\volley\build\windows\CMakeFiles\b0940d6caba2f4e7339a7385f30e50fa\INSTALL_force.rule">
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\volley\build\windows\flutter\CMakeFiles\INSTALL_force</Outputs>
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Фархад\Desktop\volley\build\windows\flutter\CMakeFiles\INSTALL_force</Outputs>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\volley\build\windows\flutter\CMakeFiles\INSTALL_force</Outputs>
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\Фархад\Desktop\volley\build\windows\flutter\CMakeFiles\INSTALL_force</Outputs>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\volley\build\windows\flutter\CMakeFiles\INSTALL_force</Outputs>
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Фархад\Desktop\volley\build\windows\flutter\CMakeFiles\INSTALL_force</Outputs>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+<<<<<<< HEAD
+    <ProjectReference Include="C:\volley\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{7233A938-1DD3-37C2-ADD3-5BC1C016DA45}</Project>
+=======
+    <ProjectReference Include="C:\Users\Фархад\Desktop\volley\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{2082AAB1-6390-3C6D-9F21-151A4F5C31FB}</Project>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+<<<<<<< HEAD
+    <ProjectReference Include="C:\volley\build\windows\ALL_BUILD.vcxproj">
+      <Project>{CA44F146-29F9-3C1E-8C29-0811CF34FA67}</Project>
+=======
+    <ProjectReference Include="C:\Users\Фархад\Desktop\volley\build\windows\ALL_BUILD.vcxproj">
+      <Project>{ABECE387-DCDF-35D9-9568-6163B28B75B7}</Project>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <Name>ALL_BUILD</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

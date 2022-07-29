@@ -1,0 +1,44 @@
+<<<<<<< HEAD
+^C:\VOLLEY\BUILD\WINDOWS\CMAKEFILES\CA9847E57B735DDB829FD27668A66D26\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\flutter PROJECT_DIR=C:\volley FLUTTER_ROOT=C:\flutter FLUTTER_EPHEMERAL_DIR=C:\volley\windows\flutter\ephemeral PROJECT_DIR=C:\volley FLUTTER_TARGET=C:\volley\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\volley\.dart_tool\package_config.json C:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+=======
+^C:\USERS\ФАРХАД\DESKTOP\VOLLEY\BUILD\WINDOWS\CMAKEFILES\E854571747EADCE43DC1B34E5FD990BE\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=E:\flutter PROJECT_DIR=C:\Users\Фархад\Desktop\volley FLUTTER_ROOT=E:\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral PROJECT_DIR=C:\Users\Фархад\Desktop\volley FLUTTER_TARGET=C:\Users\Фархад\Desktop\volley\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\Фархад\Desktop\volley\.dart_tool\package_config.json E:/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+<<<<<<< HEAD
+^C:\VOLLEY\BUILD\WINDOWS\CMAKEFILES\8D2330810048DCE3AE04411CC9690E57\FLUTTER_ASSEMBLE.RULE
+=======
+^C:\USERS\ФАРХАД\DESKTOP\VOLLEY\BUILD\WINDOWS\CMAKEFILES\B0940D6CABA2F4E7339A7385F30E50FA\FLUTTER_ASSEMBLE.RULE
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+<<<<<<< HEAD
+^C:\VOLLEY\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/volley/windows -BC:/volley/build/windows --check-stamp-file C:/volley/build/windows/flutter/CMakeFiles/generate.stamp
+=======
+^C:\USERS\ФАРХАД\DESKTOP\VOLLEY\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Фархад/Desktop/volley/windows -BC:/Users/Фархад/Desktop/volley/build/windows --check-stamp-file C:/Users/Фархад/Desktop/volley/build/windows/flutter/CMakeFiles/generate.stamp
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

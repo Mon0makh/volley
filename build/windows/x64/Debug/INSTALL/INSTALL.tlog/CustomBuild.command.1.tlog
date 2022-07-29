@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+^C:\VOLLEY\BUILD\WINDOWS\CMAKEFILES\9C1CE67CB0F8FCB4349BADB439C0FFFC\INSTALL_FORCE.RULE
+=======
+^C:\USERS\ФАРХАД\DESKTOP\VOLLEY\BUILD\WINDOWS\CMAKEFILES\B53D348CB0158B6DCBBD1B2F68E36C5C\INSTALL_FORCE.RULE
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

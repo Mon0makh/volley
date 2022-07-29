@@ -2,36 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 final Widget mysvg = SvgPicture.asset(
-  "assets\\LOGO.svg",
+  "assets/LOGO.svg",
   width: 80,
   height: 80,
 );
 
-List<OnHoverButton> _mainMenuElemensts(Map<String, Map<String, String>> val, dynamic context) {
+List<OnHoverButton> _mainMenuElemensts(
+    Map<String, Map<String, String>> val, dynamic context) {
   List<OnHoverButton> buttons = [];
   for (var item in val.entries) {
-    buttons.add(
-      OnHoverButton(item: item)
-    );
+    buttons.add(OnHoverButton(item: item));
   }
   return buttons;
 }
 
-Iterable<PopupMenuItem> _popupButtonsElement(Map<String, String> val, BuildContext context) sync* {
+Iterable<PopupMenuItem> _popupButtonsElement(
+    Map<String, String> val, BuildContext context) sync* {
   for (var item in val.entries) {
     yield PopupMenuItem(
+      padding: EdgeInsets.zero,
       value: item.key,
-      child: MouseRegion(
-        onExit: (event) => Navigator.pop(context),
-        child: TextButton(
-          onPressed: null,
-          child: Text(
-            item.key,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 13,
-              fontWeight: FontWeight.w700,
-            ),
+      child: TextButton(
+        onPressed: null,
+        child: Text(
+          item.key,
+          style: const TextStyle(
+            color: Colors.black,
+            fontSize: 13,
+            fontWeight: FontWeight.w700,
           ),
         ),
       ),
@@ -40,7 +38,7 @@ Iterable<PopupMenuItem> _popupButtonsElement(Map<String, String> val, BuildConte
 }
 
 // ignore: must_be_immutable
-class OnHoverButton extends StatefulWidget{
+class OnHoverButton extends StatefulWidget {
   late MapEntry<String, Map<String, String>> item;
   OnHoverButton({super.key, required this.item});
 
@@ -48,22 +46,21 @@ class OnHoverButton extends StatefulWidget{
   State<OnHoverButton> createState() => OnHoverButtonState();
 }
 
-class OnHoverButtonState extends State<OnHoverButton>{
+class OnHoverButtonState extends State<OnHoverButton> {
   final buttonKey = GlobalKey();
   @override
   Widget build(BuildContext context){
-    return MouseRegion(
+    return TextButton(
       key: buttonKey,
-      onEnter: (event){
-        showMenu(
+      onPressed: () => showMenu(
           useRootNavigator: true,
-          context: context, 
-          position: RelativeRect.fromSize(buttonKey.globalPaintBounds!, Size.infinite),
+          context: context,
+          position: RelativeRect.fromSize(
+              buttonKey.globalPaintBounds!, Size.infinite),
           items: _popupButtonsElement(widget.item.value, context).toList(),
-        );
-      },
+        ),
       child: Text(
-        "${widget.item.key}  |  ",
+        "  ${widget.item.key}  |",
         style: const TextStyle(
           color: Colors.black,
           fontSize: 14,

@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+=======
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|x64">
+      <Configuration>Profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+<<<<<<< HEAD
+    <ProjectGuid>{6E5F0394-F189-39A1-80AB-7255ADFBF4F1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <Platform>x64</Platform>
+=======
+    <ProjectGuid>{DDAD759E-246A-39B4-9614-4DA54CD8BC51}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+    <ProjectName>volley</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<<<<<<< HEAD
+    <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<<<<<<< HEAD
+    <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<<<<<<< HEAD
+    <PlatformToolset>v143</PlatformToolset>
+=======
+    <PlatformToolset>v142</PlatformToolset>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+<<<<<<< HEAD
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\volley\build\windows\runner\Debug\</OutDir>
+=======
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\Debug\</OutDir>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">volley.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">volley</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+<<<<<<< HEAD
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\volley\build\windows\runner\Profile\</OutDir>
+=======
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\Profile\</OutDir>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">volley.dir\Profile\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">volley</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">true</GenerateManifest>
+<<<<<<< HEAD
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\volley\build\windows\runner\Release\</OutDir>
+=======
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\Release\</OutDir>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">volley.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">volley</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+<<<<<<< HEAD
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>"4100"</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+<<<<<<< HEAD
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_HAS_EXCEPTIONS=0;_DEBUG;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_HAS_EXCEPTIONS=0;_DEBUG;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+<<<<<<< HEAD
+      <AdditionalDependencies>..\flutter\Debug\flutter_wrapper_app.lib;C:\volley\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+=======
+      <AdditionalDependencies>..\flutter\Debug\flutter_wrapper_app.lib;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+<<<<<<< HEAD
+      <ImportLibrary>C:/volley/build/windows/runner/Debug/volley.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/volley/build/windows/runner/Debug/volley.pdb</ProgramDataBaseFile>
+=======
+      <ImportLibrary>C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/volley.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Фархад/Desktop/volley/build/windows/runner/Debug/volley.pdb</ProgramDataBaseFile>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Manifest>
+<<<<<<< HEAD
+      <AdditionalManifestFiles>C:\volley\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+=======
+      <AdditionalManifestFiles>C:\Users\Фархад\Desktop\volley\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <ClCompile>
+<<<<<<< HEAD
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>"4100"</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+<<<<<<< HEAD
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Profile"</PreprocessorDefinitions>
+=======
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Profile";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+<<<<<<< HEAD
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Profile\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Profile\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+<<<<<<< HEAD
+      <AdditionalDependencies>..\flutter\Profile\flutter_wrapper_app.lib;C:\volley\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+=======
+      <AdditionalDependencies>..\flutter\Profile\flutter_wrapper_app.lib;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+<<<<<<< HEAD
+      <ImportLibrary>C:/volley/build/windows/runner/Profile/volley.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/volley/build/windows/runner/Profile/volley.pdb</ProgramDataBaseFile>
+=======
+      <ImportLibrary>C:/Users/Фархад/Desktop/volley/build/windows/runner/Profile/volley.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Фархад/Desktop/volley/build/windows/runner/Profile/volley.pdb</ProgramDataBaseFile>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Manifest>
+<<<<<<< HEAD
+      <AdditionalManifestFiles>C:\volley\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+=======
+      <AdditionalManifestFiles>C:\Users\Фархад\Desktop\volley\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+<<<<<<< HEAD
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>"4100"</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+<<<<<<< HEAD
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+=======
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+<<<<<<< HEAD
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\volley\windows;C:\volley\windows\flutter\ephemeral;C:\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Фархад\Desktop\volley\windows;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+<<<<<<< HEAD
+      <AdditionalDependencies>..\flutter\Release\flutter_wrapper_app.lib;C:\volley\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+=======
+      <AdditionalDependencies>..\flutter\Release\flutter_wrapper_app.lib;C:\Users\Фархад\Desktop\volley\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+<<<<<<< HEAD
+      <ImportLibrary>C:/volley/build/windows/runner/Release/volley.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/volley/build/windows/runner/Release/volley.pdb</ProgramDataBaseFile>
+=======
+      <ImportLibrary>C:/Users/Фархад/Desktop/volley/build/windows/runner/Release/volley.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Фархад/Desktop/volley/build/windows/runner/Release/volley.pdb</ProgramDataBaseFile>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Manifest>
+<<<<<<< HEAD
+      <AdditionalManifestFiles>C:\volley\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\volley\windows\runner\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/volley/windows -BC:/volley/build/windows --check-stamp-file C:/volley/build/windows/runner/CMakeFiles/generate.stamp
+=======
+      <AdditionalManifestFiles>C:\Users\Фархад\Desktop\volley\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Фархад\Desktop\volley\windows\runner\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Фархад/Desktop/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Фархад/Desktop/volley/windows -BC:/Users/Фархад/Desktop/volley/build/windows --check-stamp-file C:/Users/Фархад/Desktop/volley/build/windows/runner/CMakeFiles/generate.stamp
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/volley/windows -BC:/volley/build/windows --check-stamp-file C:/volley/build/windows/runner/CMakeFiles/generate.stamp
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/Users/Фархад/Desktop/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Фархад/Desktop/volley/windows -BC:/Users/Фархад/Desktop/volley/build/windows --check-stamp-file C:/Users/Фархад/Desktop/volley/build/windows/runner/CMakeFiles/generate.stamp
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/volley/windows -BC:/volley/build/windows --check-stamp-file C:/volley/build/windows/runner/CMakeFiles/generate.stamp
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Фархад/Desktop/volley/windows/runner/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Фархад/Desktop/volley/windows -BC:/Users/Фархад/Desktop/volley/build/windows --check-stamp-file C:/Users/Фархад/Desktop/volley/build/windows/runner/CMakeFiles/generate.stamp
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+<<<<<<< HEAD
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+=======
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Фархад\Desktop\volley\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+<<<<<<< HEAD
+    <ClCompile Include="C:\volley\windows\runner\flutter_window.cpp" />
+    <ClCompile Include="C:\volley\windows\runner\main.cpp" />
+    <ClCompile Include="C:\volley\windows\runner\utils.cpp" />
+    <ClCompile Include="C:\volley\windows\runner\win32_window.cpp" />
+    <ClCompile Include="C:\volley\windows\flutter\generated_plugin_registrant.cc" />
+    <ResourceCompile Include="C:\volley\windows\runner\Runner.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\volley\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{7233A938-1DD3-37C2-ADD3-5BC1C016DA45}</Project>
+=======
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\runner\flutter_window.cpp" />
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\runner\main.cpp" />
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\runner\utils.cpp" />
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\runner\win32_window.cpp" />
+    <ClCompile Include="C:\Users\Фархад\Desktop\volley\windows\flutter\generated_plugin_registrant.cc" />
+    <ResourceCompile Include="C:\Users\Фархад\Desktop\volley\windows\runner\Runner.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Фархад\Desktop\volley\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{2082AAB1-6390-3C6D-9F21-151A4F5C31FB}</Project>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+<<<<<<< HEAD
+    <ProjectReference Include="C:\volley\build\windows\flutter\flutter_assemble.vcxproj">
+      <Project>{EB5E9E96-7BD0-387F-861B-2EBECD823D4E}</Project>
+=======
+    <ProjectReference Include="C:\Users\Фархад\Desktop\volley\build\windows\flutter\flutter_assemble.vcxproj">
+      <Project>{8CB97526-DF63-3E0E-B353-7D920D08C08C}</Project>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <Name>flutter_assemble</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+<<<<<<< HEAD
+    <ProjectReference Include="C:\volley\build\windows\flutter\flutter_wrapper_app.vcxproj">
+      <Project>{FACF69DC-F6AA-3B2C-91AD-0D37D25BFDBD}</Project>
+=======
+    <ProjectReference Include="C:\Users\Фархад\Desktop\volley\build\windows\flutter\flutter_wrapper_app.vcxproj">
+      <Project>{734F1CA8-31B3-32C4-9B6C-2E3AFFCC6187}</Project>
+>>>>>>> c82518404de5c14979442aa0ddad4ee264166f63
+      <Name>flutter_wrapper_app</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
