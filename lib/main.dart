@@ -60,30 +60,34 @@ class Main extends StatelessWidget {
                 child: Row(
                   children: [
                     Padding(
-                        padding: const EdgeInsets.only(left: 46),
-                        child: TextButton(
-                            onPressed: (() => Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const SignInPage()))),
-                            child: Row(children: const [
-                              Text(
-                                "Регистрация",
-                                textAlign: TextAlign.right,
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 172, 172, 172),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w700,
-                                ),
+                      padding: const EdgeInsets.only(left: 46),
+                      child: TextButton(
+                        onPressed: (() => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SignInPage()))),
+                        child: Row(
+                          children: const [
+                            Text(
+                              "Регистрация",
+                              textAlign: TextAlign.right,
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 172, 172, 172),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
                               ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 5, right: 20),
-                                child: Icon(Icons.account_box_outlined,
-                                    size: 70,
-                                    color: Color.fromARGB(255, 199, 199, 199)),
-                              ),
-                            ]))),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(left: 5, right: 20),
+                              child: Icon(Icons.account_box_outlined,
+                                  size: 70,
+                                  color: Color.fromARGB(255, 199, 199, 199)),
+                            ),
+                          ]
+                        )
+                      )
+                    ),
                   ],
                 ),
               ),
