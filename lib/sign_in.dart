@@ -3,16 +3,16 @@ import 'main.dart';
 import 'appbar.dart';
 import 'package:http/http.dart' as http;
 
-bool zapomnit = false;
 
 class SignInPage extends StatefulWidget {
-  SignInPage({Key? key}) : super(key: key);
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => SignInPageState();
 }
 
 class SignInPageState extends State<SignInPage> {
+  bool zapomnit = false;
   int i = 0;
   TextEditingController? textController1;
   TextEditingController? textController2;
@@ -284,12 +284,9 @@ class SignInPageState extends State<SignInPage> {
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.white)
                     ),
-                    onPressed: (() => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => const Main(logged: false)
-                      )
-                    )),
+                    onPressed: () => setState(() {
+                      i = 0;
+                    }),
                     child: const Text(
                       "Отмена",
                       style: TextStyle(
@@ -472,11 +469,9 @@ class SignInPageState extends State<SignInPage> {
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.white)),
-                    onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                const Main(logged: false))),
+                    onPressed: () => setState(() {
+                      i = 0;
+                    }),
                     child: const Text(
                       "Отмена",
                       style: TextStyle(
@@ -562,11 +557,9 @@ class SignInPageState extends State<SignInPage> {
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.white)),
-                    onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                const Main(logged: false))),
+                    onPressed: () => setState(() {
+                      i = 0;
+                    }),
                     child: const Text(
                       "Отмена",
                       style: TextStyle(
